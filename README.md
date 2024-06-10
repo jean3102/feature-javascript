@@ -53,3 +53,15 @@ const numbers = [1, 2, 3, 4, 5];
 const at = numbers.at(-1);
 console.log(at)
  ```
+ 
+ - [toReversed()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed)
+
+    It returns a new array with the elements in reversed order.
+
+ ```
+const array = [1, 2, 3, 4, 5];
+
+const reversed = array.toReversed();
+console.log(reversed);
+ ```
+
