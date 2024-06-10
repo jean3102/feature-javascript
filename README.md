@@ -10,7 +10,10 @@ ECMAScript 2025 (ES2025) is the next iteration of the ECMAScript standard, build
 
 - [Object.groupBy()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy)
 
-```const employees = [
+    The returned object has separate properties for each group.
+
+``` 
+const employees = [
     {
         name: "Alice Smith",
         department: "Engineering",
@@ -36,5 +39,17 @@ ECMAScript 2025 (ES2025) is the next iteration of the ECMAScript standard, build
         employeeId: "HR004"
     }
 ];
-const groupBy = Object.groupBy(employees, employee => employee.department)```
+const groupBy = Object.groupBy(employees, employee => employee.department)
+
+console.log(groupBy)
+
+```
  - [at()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at)
+
+    when you use method .at you can pass negative values ​​to   access array of elements.
+
+ ```
+const numbers = [1, 2, 3, 4, 5];
+const at = numbers.at(-1);
+console.log(at)
+ ```
