@@ -5,6 +5,8 @@ const users = [
 ];
 
 // a-b is ascending  and b-a is descending
-const sorted = users.toSorted((a, b) => a.age - b.age);
-console.log(sorted)
+const sortByTypeNumbers = users.toSorted((a, b) => a.age - b.age);
+const sortByTypeString = users.toSorted((a, b) => a.name.localeCompare(b.name));
+
+export { sortByTypeNumbers, sortByTypeString }
 
