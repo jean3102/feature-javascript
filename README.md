@@ -68,6 +68,7 @@ console.log(reversed);
  - [toSorted()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted)
 
     The toSorted() method of Array instances is the copying version of the sort() method. It returns a new array with the elements sorted in ascending order.
+    
  ```
 const users = [
     { name: 'John', age: 30 },
@@ -81,6 +82,22 @@ const sortByTypeString = users.toSorted((a, b) => a.name.localeCompare(b.name));
 
 console.log(sortByTypeString)
 console.log(sortByTypeNumbers)
+
+ ```
+ 
+ - [toSpliced()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced)
+
+    The toSpliced() method of Array instances is the copying version of the splice() method. It returns a new array with some elements removed and/or replaced at a given index.
+
+ ```
+const fruits = ['🍎', '🍌', '🍒', '🍇', '🍊', '🍍'];
+
+const index = 2;
+const deleteCount = 1;
+const newElement = '🍉';
+
+export const tospliced = fruits.toSpliced(index, deleteCount, newElement);
+console.log(tospliced);
 
  ```
 
