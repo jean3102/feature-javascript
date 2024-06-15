@@ -64,4 +64,20 @@ const array = [1, 2, 3, 4, 5];
 const reversed = array.toReversed();
 console.log(reversed);
  ```
+ 
+ - [toSorted()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted)
+
+    The toSorted() method of Array instances is the copying version of the sort() method. It returns a new array with the elements sorted in ascending order.
+ ```
+const users = [
+    { name: 'John', age: 30 },
+    { name: 'Jane', age: 25 },
+    { name: 'Bob', age: 40 }
+];
+
+// a-b is ascending  and b-a is descending
+const sorted = users.toSorted((a, b) => a.age - b.age);
+console.log(sorted)
+
+ ```
 
