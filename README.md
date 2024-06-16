@@ -1,4 +1,4 @@
-# ECMAScript 2025 (ES2025) Readme
+# ECMAScript 2025 (ES2025) 
 
 Here I leave you some of the most interesting developments in javascript 2025
 
