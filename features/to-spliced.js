@@ -5,4 +5,3 @@ const deleteCount = 1;
 const newElement = '🍉';
 
 export const tospliced = fruits.toSpliced(index, deleteCount, newElement);
-console.log(tospliced);

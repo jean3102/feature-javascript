@@ -5,6 +5,7 @@ import {
 	sortByTypeNumbers,
 	sortByTypeString,
 	tospliced,
+	withResult
 } from './features/index.js';
 
 // console.log('groupBy', groupBy)
@@ -12,4 +13,5 @@ import {
 // console.log('toReversed', toReversed)
 // console.log('sortByTypeNumbers', sortByTypeNumbers)
 // console.log('sortByTypeString', sortByTypeString)
-console.log('tospliced', tospliced);
+// console.log('tospliced', tospliced);
+console.log('withResult', withResult);
