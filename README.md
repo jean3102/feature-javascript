@@ -97,7 +97,7 @@ ECMAScript 2025 (ES2025) is the next iteration of the ECMAScript standard, build
 
     export const tospliced = fruits.toSpliced(index, deleteCount, newElement);
     console.log(tospliced);
- 
+  ```
 
  - [with()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with)
 
