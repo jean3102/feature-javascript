@@ -5,8 +5,9 @@ import {
 	sortByTypeNumbers,
 	sortByTypeString,
 	tospliced,
-	// withResult
-	findLast
+	withResult,
+	findLast,
+	findLastIndex
 } from './features/index.js';
 
 // console.log('groupBy', groupBy)
@@ -16,4 +17,5 @@ import {
 // console.log('sortByTypeString', sortByTypeString)
 // console.log('tospliced', tospliced);
 // console.log('withResult', withResult);
-console.log('findLast', findLast);
+// console.log('findLast', findLast);
+console.log('findLastIndex', findLastIndex);

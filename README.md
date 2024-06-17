@@ -1,18 +1,18 @@
-# ECMAScript 2025 (ES2025) 
+# ECMAScript 2025 (ES2025)
 
 Here I leave you some of the most interesting developments in javascript 2025
 
 ## Overview
-ECMAScript 2025 (ES2025) is the next iteration of the ECMAScript standard, building upon the features introduced in ECMAScript 2024. This new edition aims to further enhance the language with additional features, optimizations, and improvements to empower developers to write more expressive and efficient code.
 
+ECMAScript 2025 (ES2025) is the next iteration of the ECMAScript standard, building upon the features introduced in ECMAScript 2024. This new edition aims to further enhance the language with additional features, optimizations, and improvements to empower developers to write more expressive and efficient code.
 
 ## New Features
 
 - [Object.groupBy()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy)
 
-    The returned object has separate properties for each group.
+  The returned object has separate properties for each group.
 
-``` 
+```
     const employees = [
         {
             name: "Alice Smith",
@@ -43,109 +43,140 @@ ECMAScript 2025 (ES2025) is the next iteration of the ECMAScript standard, build
     console.log(groupBy)
 
 ```
- - [at()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at)
 
-    when you use method .at you can pass negative values ​​to   access array of elements.
+- [at()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at)
 
- ```
-    const numbers = [1, 2, 3, 4, 5];
-    const at = numbers.at(-1);
-    console.log(at)
- ```
- 
- - [toReversed()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed)
+  when you use method .at you can pass negative values ​​to access array of elements.
 
-    It returns a new array with the elements in reversed order.
+```
+   const numbers = [1, 2, 3, 4, 5];
+   const at = numbers.at(-1);
+   console.log(at)
+```
 
- ```
-    const array = [1, 2, 3, 4, 5];
+- [toReversed()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed)
 
-    const reversed = array.toReversed();
-    console.log(reversed);
- ```
- 
- - [toSorted()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted)
+  It returns a new array with the elements in reversed order.
 
-    The toSorted() method of Array instances is the copying version of the sort() method. It returns a new array with the elements sorted in ascending order.
-    
- ```
+```
+   const array = [1, 2, 3, 4, 5];
+
+   const reversed = array.toReversed();
+   console.log(reversed);
+```
+
+- [toSorted()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted)
+
+  The toSorted() method of Array instances is the copying version of the sort() method. It returns a new array with the elements sorted in ascending order.
+
+```
+   const users = [
+       { name: 'John', age: 30 },
+       { name: 'Jane', age: 25 },
+       { name: 'Bob', age: 40 }
+   ];
+
+   // a-b is ascending  and b-a is descending
+   const sortByTypeNumbers = users.toSorted((a, b) => a.age - b.age);
+   const sortByTypeString = users.toSorted((a, b) => a.name.localeCompare(b.name));
+
+   console.log(sortByTypeString)
+   console.log(sortByTypeNumbers)
+
+```
+
+- [toSpliced()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced)
+
+  The toSpliced() method of Array instances is the copying version of the splice() method. It returns a new array with some elements removed and/or replaced at a given index.
+
+```
+   const fruits = ['🍎', '🍌', '🍒', '🍇', '🍊', '🍍'];
+
+   const index = 2;
+   const deleteCount = 1;
+   const newElement = '🍉';
+
+   export const tospliced = fruits.toSpliced(index, deleteCount, newElement);
+   console.log(tospliced);
+```
+
+- [with()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with)
+
+  The with() returns a new array with the element at the given index replaced with the given value.
+
+```
+   const todoList = [
+       {
+           id: 1,
+           title: 'Learn JavaScript',
+           completed: false,
+       },
+       {
+           id: 2,
+           title: 'Build a Todo App',
+           completed: true,
+       },
+       {
+           id: 3,
+           title: 'Deploy the App',
+           completed: false,
+       },
+   ];
+
+   const completeTodo = (id) => {
+       const index = todoList.findIndex((todo) => todo.id === id);
+       if (index === -1) return 'todo not found';
+
+       const originalTodo = todoList[index];
+
+       if (originalTodo.completed) return 'todo already completed';
+       return todoList.with(index, { ...originalTodo, completed: true });
+   };
+
+   const withResult = completeTodo(1);
+   console.log(withResult);
+
+```
+
+- [findLast()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast)
+
+  Iterates the array in reverse order and returns the value of the first element that satisfies
+
+```
+   const array = [10, 52, 74, 58, , 85, 96];
+
+   const findLast = array.findLast((element) => element === 58);
+   console.log(findLast);
+
+```
+
+- [findLastIndex()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex)
+
+  iterates the array in reverse order and returns the index of the first elemen
+
+```
     const users = [
-        { name: 'John', age: 30 },
-        { name: 'Jane', age: 25 },
-        { name: 'Bob', age: 40 }
-    ];
-
-    // a-b is ascending  and b-a is descending
-    const sortByTypeNumbers = users.toSorted((a, b) => a.age - b.age);
-    const sortByTypeString = users.toSorted((a, b) => a.name.localeCompare(b.name));
-
-    console.log(sortByTypeString)
-    console.log(sortByTypeNumbers)
-
- ```
- 
- - [toSpliced()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced)
-
-    The toSpliced() method of Array instances is the copying version of the splice() method. It returns a new array with some elements removed and/or replaced at a given index.
-
- ```
-    const fruits = ['🍎', '🍌', '🍒', '🍇', '🍊', '🍍'];
-
-    const index = 2;
-    const deleteCount = 1;
-    const newElement = '🍉';
-
-    export const tospliced = fruits.toSpliced(index, deleteCount, newElement);
-    console.log(tospliced);
-  ```
-
- - [with()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with)
-
-    The with() returns a new array with the element at the given index replaced with the given value.
-
- ```
-    const todoList = [
         {
             id: 1,
-            title: 'Learn JavaScript',
-            completed: false,
+            name: 'John Doe',
+            username: 'johndoe',
+            email: 'john.doe@example.com',
         },
         {
             id: 2,
-            title: 'Build a Todo App',
-            completed: true,
+            name: 'Jane Doe',
+            username: 'janedoe',
+            email: 'jane.doe@example.com',
         },
         {
             id: 3,
-            title: 'Deploy the App',
-            completed: false,
+            name: 'Alice Smith',
+            username: 'alicesmith',
+            email: 'alice.smith@example.com',
         },
     ];
 
-    const completeTodo = (id) => {
-        const index = todoList.findIndex((todo) => todo.id === id);
-        if (index === -1) return 'todo not found';
+    const findLastIndex = users.findLastIndex((user) => user.id === 2);
+    console.log(findLastIndex);
 
-        const originalTodo = todoList[index];
-
-        if (originalTodo.completed) return 'todo already completed';
-        return todoList.with(index, { ...originalTodo, completed: true });
-    };
-
-    const withResult = completeTodo(1);
-    console.log(withResult);
-
- ```
-
- - [findLast()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast)
-
-     Iterates the array in reverse order and returns the value of the first element that satisfies
-
- ```
-    const array = [10, 52, 74, 58, , 85, 96];
-
-    const findLast = array.findLast((element) => element === 58);
-    console.log(findLast);
-
- ```
-
+```
