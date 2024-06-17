@@ -6,6 +6,35 @@ Here I leave you some of the most interesting developments in javascript 2025
 
 ECMAScript 2025 (ES2025) is the next iteration of the ECMAScript standard, building upon the features introduced in ECMAScript 2024. This new edition aims to further enhance the language with additional features, optimizations, and improvements to empower developers to write more expressive and efficient code.
 
+## Requirements
+
+To run this project, you must ensure you have **Node.js version 21 or higher** installed. Some features of the project depend on the enhancements and fixes available in these recent versions of Node.js.
+
+1. **Check the Node.js version**
+   ```
+   node -v
+   ```
+
+2. **Clone repository**
+
+   ```
+   git clone https://github.com/jean3102/feature-javascript.git
+
+   ```
+3. **Access the folder**
+
+   ```
+   cd feature-javascript
+
+   ```
+3. **Run app**
+
+```
+  npm run dev
+```
+
+Then go to the `app.js` file and comment out what you want to test
+
 ## New Features
 
 - [Object.groupBy()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy)
