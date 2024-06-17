@@ -137,3 +137,15 @@ ECMAScript 2025 (ES2025) is the next iteration of the ECMAScript standard, build
 
  ```
 
+ - [findLast()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast)
+
+     Iterates the array in reverse order and returns the value of the first element that satisfies
+
+ ```
+    const array = [10, 52, 74, 58, , 85, 96];
+
+    const findLast = array.findLast((element) => element === 58);
+    console.log(findLast);
+
+ ```
+
