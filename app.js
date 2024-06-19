@@ -18,4 +18,4 @@ import {
 // console.log('tospliced', tospliced);
 // console.log('withResult', withResult);
 // console.log('findLast', findLast);
-console.log('findLastIndex', findLastIndex);
+//console.log('findLastIndex', findLastIndex);
